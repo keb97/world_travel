@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Traveler:</b>
+  <%= @visit.traveler.name %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @visit.country.name %>
+</p>
+
+<p>
+  <b>Arrival:</b>
+  <%= @visit.arrival %>
+</p>
+
+<p>
+  <b>Departure:</b>
+  <%= @visit.departure %>
+</p>
+
+<p>
+  <b>Reason:</b>
+  <%= @visit.reason %>
+</p>
+
+
+<%= link_to 'Edit', edit_visit_path(@visit) %> |
+<%= link_to 'Back', visits_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  arrival: 2013-07-24 13:13:58
+  departure: 2013-07-24 13:13:58
+  reason: MyText
+
+two:
+  arrival: 2013-07-24 13:13:58
+  departure: 2013-07-24 13:13:58
+  reason: MyText

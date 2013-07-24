@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @traveler.name %></b>
+</p>
+<p>
+  <table>
+  <tr>
+    <th>Country</th>
+    <th>Arrival</th>
+    <th>Departure</th>
+    <th>Reason</th>
+   </tr>
+
+<% @traveler.visits.each do |visit| %>
+  <tr>
+    <td><%= visit.country.name %></td>
+    <td><%= visit.arrival %></td>
+    <td><%= visit.departure %></td>
+    <td><%= visit.reason %></td>
+
+  </tr>
+<% end %>
+</table>
+</p>
+
+
+<%= link_to 'Edit', edit_traveler_path(@traveler) %> |
+<%= link_to 'Back', travelers_path %>

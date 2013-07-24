@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @country.name %>
+</p>
+<p>
+  <table>
+  <tr>
+    <th>Traveler</th>
+    <th>Arrival</th>
+    <th>Departure</th>
+    <th>Reason</th>
+   </tr>
+
+<% @country.visits.each do |visit| %>
+  <tr>
+    <td><%= visit.traveler.name %></td>
+    <td><%= visit.arrival %></td>
+    <td><%= visit.departure %></td>
+    <td><%= visit.reason %></td>
+
+  </tr>
+<% end %>
+</table>
+</p>
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>
