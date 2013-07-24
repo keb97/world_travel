@@ -7,6 +7,8 @@ WorldTravel::Application.routes.draw do
 
   resources :travelers
 
+  root :to => "visits#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

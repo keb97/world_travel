@@ -1,4 +1,4 @@
-<h1>Welcome To the World Travel App!</h1>
+<h1>The World Travel App!</h1>
 <h2>Create some travelers:</h2>
 <%= link_to "Your travelers", :travelers %>
 <h2>Create your countries:</h2>
@@ -21,8 +21,8 @@
 
 <% @visits.each do |visit| %>
   <tr>
-    <td><%= visit.traveler.name %></td>
-    <td><%= visit.country.name %></td>
+    <td><%= link_to visit.traveler.name, traveler_path(visit.traveler) %></td>
+    <td><%= link_to visit.country.name, country_path(visit.country) %></td>
     <td><%= visit.arrival %></td>
     <td><%= visit.departure %></td>
     <td><%= visit.reason %></td>
