@@ -9,6 +9,10 @@ WorldTravel::Application.routes.draw do
 
   root :to => "visits#index"
 
+  match 'auth/twitter/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
